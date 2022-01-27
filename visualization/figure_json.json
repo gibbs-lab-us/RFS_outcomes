@@ -1,0 +1,1725 @@
+{      
+      "combined": {
+            "fig1": {
+                  "core": {
+                        "palette_low":"BuPu",
+                        "palette_high":"YlGn",
+
+                        "output_dir":"combined",
+                        "output_file":"fig1",
+                        "legend.position.y":-0.12,
+
+                        "plot.title.vjust":1,
+                        "plot.title.hjust":0.0,
+
+
+                        "draw_plot":{"x":-0.200,"y":-0.20,"w":1.4,"h":0.70},
+
+                        "legend.title.position.x":0,
+                        "legend.title.position.y":3,
+                        "legend.title.just":"left",
+                        "legend.title.rot":0,
+                        "legend.title.fontsize":40,
+
+                        "legend.labels.rot":315,
+                        "legend.labels.just":"left",
+                        "legend.labels.fontsize":35,
+                        "legend.labels.coef":0.98,
+
+                        "dev.cnt":9,
+                        "dev.q":0.25,
+                        "pnas_fig": "pnas_main_fig2"
+                  },
+                  "panels": {
+
+                         "p1": {
+                              "parent":"intensification",
+                              "schema":"intensification_4_16_2020_abs",
+                              "dataset":"corntot_acres_fips_summary",
+                              "lookup":"acres_corn",
+                              "bin_breaks":[-1e300, -8000, -4000, -2000, -1000, 0, 1000, 2000, 4000, 8000, 1e300], 
+                              "sat":10000,                                                        
+                              "plot.title":"A",
+                              "df2csv":"corn_area",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":7000,
+                              "dev.incr":1000,
+                              "dev.plot.title":"A"
+                        },
+
+
+                        "p2": {
+                              "parent":"extensification",
+                              "schema":"extensification_4_16_2020",
+                              "dataset":"net_acres_fips_summary",
+                              "lookup":"acres",
+                              "bin_breaks":[-1e300, -8000, -4000, -2000, -1000, 0, 1000, 2000, 4000, 8000, 1e300], 
+                              "sat":10000,  
+                              "plot.title":"B",
+                              "df2csv":"cropland_area",
+                              
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":7000,
+                              "dev.incr":1000,
+                              "dev.plot.title":"B"    
+                        },
+
+                        "p3": {
+                              "parent":"extensification",
+                              "schema":"extensification_4_16_2020",
+                              "dataset":"net_diff_carbon_fips_summary",
+                              "lookup":"carbon",
+                              "bin_breaks":[-1e300, -8000, -4000, -2000, -1000, 0, 1000, 2000, 4000, 8000, 1e300], 
+                              "sat":2000,  
+                              "plot.title":"C",
+                              "df2csv":"carbon_emissions",
+                              
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":1000,
+                              "dev.incr":500,
+                              "dev.plot.title":"C"
+                        },
+
+
+                        "p4": {
+                              "parent":"combined",
+                              "schema":"combined_4_16_2020",
+                              "dataset":"napp_ext_int_diff_fips_summary",
+                              "lookup":"napp",
+                              "bin_breaks":[-1e4, -1e3, -500, -100, -50, 0, 50, 100, 500, 1e3, 1e4], 
+                              "sat":4000,                                                        
+                              "plot.title":"D",
+                              "df2csv":"nitrogen_applied",
+
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":2000,
+                              "dev.incr":500,
+                              "dev.plot.title":"D"           
+  
+                        },
+                        "p5": {
+                              "parent":"combined",
+                              "schema":"combined_4_16_2020",
+                              "dataset":"n2o_ext_int_diff_fips_summary",
+                              "lookup":"n2o",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -500, -100, 0, 100, 500, 1e3, 1e4, 1e300], 
+                              "sat":20000,                                                         
+                              "plot.title":"E",
+                              "df2csv":"n2o_emissions",
+
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":10000,
+                              "dev.incr":1000,
+                              "dev.plot.title":"E"            
+  
+                        },
+                        "p6": {
+                              "parent":"combined",
+                              "schema":"combined_4_16_2020",
+                              "dataset":"nleach_ext_int_diff_fips_summary",
+                              "lookup":"nleach",
+                              "bin_breaks":[-1000, -500, -100, -50, -25, 0, 25, 50, 100, 500, 1000],  
+                              "sat":400,                                                       
+                              "plot.title":"F",
+                              "df2csv":"nitrate_leaching",
+
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":100,
+                              "dev.plot.title":"F"            
+  
+                        },
+                        "p7": {
+                              "parent":"combined",
+                              "schema":"combined_4_16_2020",
+                              "dataset":"papp_ext_int_diff_fips_summary",
+                              "lookup":"papp",
+                              "bin_breaks":[-1000, -500, -100, -50, -25, 0, 25, 50, 100, 500, 1000],                                                            
+                              "sat":400,
+                              "plot.title":"G",
+                              "df2csv":"phosphorus_applied",
+
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":100,
+                              "dev.plot.title":"G"            
+  
+                        },
+                        "p8": {
+                              "parent":"combined",
+                              "schema":"combined_4_16_2020",
+                              "dataset":"sedyield_ext_int_diff_fips_summary",
+                              "lookup":"sedyield",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -500, -100, 0, 100, 500, 1e3, 1e4, 1e300],  
+                              "sat":4000,                                                       
+                              "plot.title":"H",
+                              "df2csv":"soil_erosion",
+
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":1500,
+                              "dev.incr":500,
+                              "dev.plot.title":"H"            
+  
+                        },
+                        "p9": {
+                              "parent":"combined",
+                              "schema":"combined_4_16_2020",
+                              "dataset":"pyield_ext_int_diff_fips_summary",
+                              "lookup":"pyield",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -500, -100, 0, 100, 500, 1e3, 1e4, 1e300], 
+                              "sat":2000,                                                       
+                              "plot.title":"I",
+                              "df2csv":"phosphorus_runoff",
+
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":1500,
+                              "dev.incr":500,
+                              "dev.plot.title":"I"            
+  
+                        }
+
+                  }                       
+            }
+      },
+      "extensification": {
+            "fig1": {
+                  "core": {
+                        "parent":"extensification",
+                        "schema":"extensification_4_16_2020",
+
+                        "palette_low":"BuPu",
+                        "palette_high":"YlGn",
+
+                        "output_dir":"extensification",
+                        "output_file":"fig1",
+                        "legend.position.y":-0.12,
+
+                        "plot.title.vjust":1,
+                        "plot.title.hjust":0.50,
+                        "plot.subtitle.vjust":1,
+                        "plot.subtitle.hjust":0.00,
+
+                        "draw_plot":{"x":-0.200,"y":-0.20,"w":1.4,"h":0.70},
+
+                        "legend.title.position.x":0,
+                        "legend.title.position.y":3,
+                        "legend.title.just":"left",
+                        "legend.title.rot":0,
+                        "legend.title.fontsize":40,
+
+                        "legend.labels.rot":315,
+                        "legend.labels.just":"left",
+                        "legend.labels.fontsize":35,
+                        "legend.labels.coef":0.98,
+
+                        "dev.cnt":3,
+                        "dev.q":0.25,
+                        "pnas_fig": "pnas_supp_fig_s2"
+
+                  },
+                  "panels": {
+
+                         "p1": {
+                              "parent":"extensification",
+                              "schema":"extensification_4_16_2020",
+                              "dataset":"area_region_exp",
+                              "input_dataset":"exp_acres_fips_summary",
+                              "bin_breaks":[-16000, -8000, -4000, -2000, -1000, 0, 1000, 2000, 4000, 8000, 1e300],
+                              "sat":3,                                                         
+
+                              "plot.title":"Cropland expansion",
+                              "plot.subtitle":"A",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+
+                              "dev.krnl":0,
+                              "dev.incr":0.5,
+                              "dev.plot.title":"A",
+
+                              "df2csv":"cropland_expansion_perc_region"
+                        },
+
+                        "p2": {
+                              "parent":"extensification",
+                              "schema":"extensification_4_16_2020",
+                              "dataset":"area_region_abd",
+                              "input_dataset":"abd_acres_fips_summary",
+                              "bin_breaks":[-1e5, -1e4, -1e3, -1e2, -25, 0, 25, 1e2, 1e3, 1e4, 1e5],
+                              "sat":3,
+
+                              "plot.title":"Cropland abandonment",
+                              "plot.subtitle":"B",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":0.5,
+                              "dev.plot.title":"B",
+
+                              "df2csv":"cropland_abandonment_perc_region"   
+                        },
+
+                        "p3": {
+                              "parent":"extensification",
+                              "schema":"extensification_4_16_2020",
+                              "dataset":"area_region_net",
+                              "input_dataset":"net_acres_fips_summary",
+                              "bin_breaks":[-1e5, -1e4, -1e3, -1e2, -25, 0, 25, 1e2, 1e3, 1e4, 1e5],
+                              "sat":3,
+
+                              "plot.title":"Net cropland change",
+                              "plot.subtitle":"C",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":0.5,
+                              "dev.plot.title":"C",
+
+                              "df2csv":"net_cropland_change_perc_region"
+                        },
+
+
+                        "p4": {
+                              "dataset":"exp_acres_fips_summary",
+                              "lookup":"area_ha",
+                              "bin_breaks":[-1e4, -1e3, -500, -100, -50, 0, 50, 100, 500, 1e3, 1e4],
+                              "sat":10000,
+
+                              "plot.title":"",
+                              "plot.subtitle":"D",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.9,
+
+                              "dev.krnl":10000,
+                              "dev.incr":0,
+                              "dev.plot.title":"D",
+
+                              "df2csv":"cropland_expansion_area_fips"      
+  
+                        },
+                        "p5": {
+                              "dataset":"abd_acres_fips_summary",
+                              "lookup":"area_ha",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -500, -100, 0, 100, 500, 1e3, 1e4, 1e300],
+                              "sat":10000,
+
+                              "plot.title":"",
+                              "plot.subtitle":"E",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":10000,
+                              "dev.incr":0,
+                              "dev.plot.title":"E",
+
+                             "df2csv":"cropland_abandonment_area_fips"        
+  
+                        },
+                        "p6": {
+                              "dataset":"net_acres_fips_summary",
+                              "lookup":"area_ha",
+                              "bin_breaks":[-1000, -500, -100, -50, -25, 0, 25, 50, 100, 500, 1000],
+                              "sat":10000,
+
+                              "plot.title":"",
+                              "plot.subtitle":"F",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":10000,
+                              "dev.incr":0,
+                              "dev.plot.title":"F",
+
+                              "df2csv":"net_cropland_change_area_fips"           
+  
+                        },
+                         "p7": {
+                              "dataset":"exp_diff_carbon_fips_summary",
+                              "lookup":"carbon",
+                              "bin_breaks":[-1e4, -1e3, -500, -100, -50, 0, 50, 100, 500, 1e3, 1e4],
+                              "sat":2000,
+
+                              "plot.title":"",
+                              "plot.subtitle":"G",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.75,
+
+                              "dev.krnl":1500,
+                              "dev.incr":200,
+                              "dev.plot.title":"G",
+
+                              "df2csv":"cropland_expansion_carbon_fips"          
+  
+                        },
+                        "p8": {
+                              "dataset":"abd_diff_carbon_fips_summary",
+                              "lookup":"carbon",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -500, -100, 0, 100, 500, 1e3, 1e4, 1e300],
+                              "sat":2000,
+
+                              "plot.title":"",
+                              "plot.subtitle":"H",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":1500,
+                              "dev.incr":200,
+                              "dev.plot.title":"H",
+
+                              "df2csv":"cropland_abandonment_carbon_fips"          
+  
+                        },
+                        "p9": {
+                              "dataset":"net_diff_carbon_fips_summary",
+                              "lookup":"carbon",
+                              "bin_breaks":[-1000, -500, -100, -50, -25, 0, 25, 50, 100, 500, 1000],
+                              "sat":2000,
+
+                              "plot.title":"",
+                              "plot.subtitle":"I",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":1500,
+                              "dev.incr":200,
+                              "dev.plot.title":"I",
+
+                              "df2csv":"net_cropland_change_carbon_fips"          
+  
+                        }
+
+                  }                       
+            },
+            "fig2": {
+                  "core": {
+                        "parent":"extensification",
+                        "schema":"extensification_4_16_2020",
+
+                        "palette_low":"BuPu",
+                        "palette_high":"YlGn",
+
+                        "output_dir":"extensification",
+                        "output_file":"fig2",
+                        "legend.position.y":-0.12,
+
+                        "plot.title.vjust":1,
+                        "plot.title.hjust":0.50,
+                        "plot.subtitle.vjust":1,
+                        "plot.subtitle.hjust":0.00,
+
+
+
+                        "draw_plot":{"x":-0.200,"y":-0.20,"w":1.4,"h":0.70},
+
+                        "legend.title.position.x":0,
+                        "legend.title.position.y":3,
+                        "legend.title.just":"left",
+                        "legend.title.rot":0,
+                        "legend.title.fontsize":40,
+
+                        "legend.labels.rot":315,
+                        "legend.labels.just":"left",
+                        "legend.labels.fontsize":35,
+                        "legend.labels.coef":0.98,
+
+                        "dev.cnt":9,
+                        "dev.q":0.25,
+                        "pnas_fig": "pnas_supp_fig_s4"
+
+                  },
+                  "panels": {
+
+                         "p1": {
+                              "dataset":"exp_diff_napp_fips_summary",
+                              "lookup":"napp",
+                              "bin_breaks":[-16000, -8000, -4000, -2000, -1000, 0, 1000, 2000, 4000, 8000, 1e300],
+                              "sat":500,                                                         
+
+                              "plot.title":"Cropland expansion",
+                              "plot.subtitle":"A",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+
+                              "dev.krnl":0,
+                              "dev.incr":100,
+                              "dev.plot.title":"A",
+                              "df2csv":"cropland_expansion_napp"
+                        },
+
+                        "p2": {
+                              "dataset":"abd_diff_napp_fips_summary",
+                              "lookup":"napp",
+                              "bin_breaks":[-1e5, -1e4, -1e3, -1e2, -25, 0, 25, 1e2, 1e3, 1e4, 1e5],
+                              "sat":500,
+
+                              "plot.title":"Cropland abandonment",
+                              "plot.subtitle":"B",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":100,
+                              "dev.plot.title":"B",
+                              "df2csv":"cropland_abandonment_napp"   
+                        },
+
+                        "p3": {
+                              "dataset":"net_diff_napp_fips_summary",
+                              "lookup":"napp",
+                              "bin_breaks":[-1e5, -1e4, -1e3, -1e2, -25, 0, 25, 1e2, 1e3, 1e4, 1e5],
+                              "sat":500,
+
+                              "plot.title":"Net cropland change",
+                              "plot.subtitle":"C",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":100,
+                              "dev.plot.title":"C",
+                              "df2csv":"net_cropland_change_napp"
+                        },
+
+
+                        "p4": {
+                              "dataset":"exp_diff_n2o_fips_summary",
+                              "lookup":"n2o",
+                              "bin_breaks":[-1e4, -1e3, -500, -100, -50, 0, 50, 100, 500, 1e3, 1e4],
+                              "sat":5000,
+
+                              "plot.title":"",
+                              "plot.subtitle":"D",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":500,
+                              "dev.incr":500,
+                              "dev.plot.title":"D",
+                              "df2csv":"cropland_expansion_n2o"          
+  
+                        },
+                        "p5": {
+                              "dataset":"abd_diff_n2o_fips_summary",
+                              "lookup":"n2o",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -500, -100, 0, 100, 500, 1e3, 1e4, 1e300],
+                              "sat":5000,
+
+                              "plot.title":"",
+                              "plot.subtitle":"E",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":800,
+                              "dev.incr":100,
+                              "dev.plot.title":"E",
+                              "df2csv":"cropland_abandonment_n2o"           
+  
+                        },
+                        "p6": {
+                              "dataset":"net_diff_n2o_fips_summary",
+                              "lookup":"n2o",
+                              "bin_breaks":[-1000, -500, -100, -50, -25, 0, 25, 50, 100, 500, 1000],
+                              "sat":5000,
+
+                              "plot.title":"",
+                              "plot.subtitle":"F",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":500,
+                              "dev.incr":500,
+                              "dev.plot.title":"F",
+                              "df2csv":"net_cropland_change_n2o"            
+  
+                        },
+                         "p7": {
+                              "dataset":"exp_diff_nleach_fips_summary",
+                              "lookup":"nleach",
+                              "bin_breaks":[-1e4, -1e3, -500, -100, -50, 0, 50, 100, 500, 1e3, 1e4],
+                              "sat":200,
+
+                              "plot.title":"",
+                              "plot.subtitle":"G",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":0,
+                              "dev.incr":100,
+                              "dev.plot.title":"G",
+                              "df2csv":"cropland_expansion_nleach"          
+  
+                        },
+                        "p8": {
+                              "dataset":"abd_diff_nleach_fips_summary",
+                              "lookup":"nleach",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -500, -100, 0, 100, 500, 1e3, 1e4, 1e300],
+                              "sat":200,
+
+                              "plot.title":"",
+                              "plot.subtitle":"H",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":25,
+                              "dev.plot.title":"H",
+                              "df2csv":"cropland_abandonment_nleach"            
+  
+                        },
+                        "p9": {
+                              "dataset":"net_diff_nleach_fips_summary",
+                              "lookup":"nleach",
+                              "bin_breaks":[-1000, -500, -100, -50, -25, 0, 25, 50, 100, 500, 1000],
+                              "sat":200,
+
+                              "plot.title":"",
+                              "plot.subtitle":"I",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":100,
+                              "dev.plot.title":"I",
+                              "df2csv":"net_cropland_change_nleach"           
+  
+                        }
+
+                  }                       
+            },
+            "fig3": {
+                  "core": {
+                        "parent":"extensification",
+                        "schema":"extensification_4_16_2020",
+
+                        "palette_low":"BuPu",
+                        "palette_high":"YlGn",
+
+                        "output_dir":"extensification",
+                        "output_file":"fig3",
+                        "legend.position.y":-0.12,
+
+                        "plot.title.vjust":1,
+                        "plot.title.hjust":0.50,
+                        "plot.subtitle.vjust":1,
+                        "plot.subtitle.hjust":0.00,
+
+                        "draw_plot":{"x":-0.200,"y":-0.20,"w":1.4,"h":0.70},
+
+                        "legend.title.position.x":0,
+                        "legend.title.position.y":3,
+                        "legend.title.just":"left",
+                        "legend.title.rot":0,
+                        "legend.title.fontsize":40,
+
+                        "legend.labels.rot":315,
+                        "legend.labels.just":"left",
+                        "legend.labels.fontsize":35,
+                        "legend.labels.coef":0.98,
+
+                        "dev.cnt":9,
+                        "dev.q":0.25,
+                        "pnas_fig": "pnas_supp_fig_s6"
+                  },
+                  "panels": {
+
+                         "p1": {
+                              "dataset":"exp_diff_papp_fips_summary",
+                              "lookup":"papp",
+                              "bin_breaks":[-1e300, -8000, -4000, -2000, -1000, 0, 1000, 2000, 4000, 8000, 1e300],
+                              "sat":200000,                                                        
+
+                              "plot.title":"Cropland expansion",
+                              "plot.subtitle":"A",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":0,
+                              "dev.incr":100000,
+                              "dev.plot.title":"A",
+                              "df2csv":"cropland_expansion_papp"
+                        },
+
+                        "p2": {
+                              "dataset":"abd_diff_papp_fips_summary",
+                              "lookup":"papp",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -1e2, -25, 0, 25, 1e2, 1e3, 1e4, 1e300],
+                              "sat":200000,
+
+                              "plot.title":"Cropland abandonment",
+                              "plot.subtitle":"B",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":100000,
+                              "dev.plot.title":"B",
+                              "df2csv":"cropland_abandonment_papp"    
+                        },
+
+                        "p3": {
+                              "dataset":"net_diff_papp_fips_summary",
+                              "lookup":"papp",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -1e2, -25, 0, 25, 1e2, 1e3, 1e4, 1e300],
+                              "sat":200000,
+
+                              "plot.title":"Net cropland change",
+                              "plot.subtitle":"C",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":100000,
+                              "dev.plot.title":"C",
+                              "df2csv":"net_cropland_change_papp"     
+                        },
+
+
+                        "p4": {
+                              "dataset":"exp_diff_sedrunoff_fips_summary",
+                              "lookup":"sedrunoff",
+                              "bin_breaks":[-1e300, -1e3, -500, -100, -50, 0, 50, 100, 500, 1e3, 1e300],
+                              "sat":2000,                                                         
+                              "plot.title":"",
+                              "plot.subtitle":"D",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":2000,
+                              "dev.incr":0,
+                              "dev.plot.title":"D",
+                              "df2csv":"cropland_expansion_sedrunoff"             
+  
+                        },
+                        "p5": {
+                              "dataset":"abd_diff_sedrunoff_fips_summary",
+                              "lookup":"sedrunoff",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -500, -100, 0, 100, 500, 1e3, 1e4, 1e300],
+                              "sat":2000,                                                          
+                              "plot.title":"",
+                              "plot.subtitle":"E",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":2000,
+                              "dev.incr":0,
+                              "dev.plot.title":"E",
+                              "df2csv":"cropland_abandonment_sedrunoff"            
+  
+                        },
+                        "p6": {
+                              "dataset":"net_diff_sedrunoff_fips_summary",
+                              "lookup":"sedrunoff",
+                              "bin_breaks":[-1e300, -500, -100, -50, -25, 0, 25, 50, 100, 500, 1e300],
+                              "sat":2000,                                                        
+                              "plot.title":"",
+                              "plot.subtitle":"F",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":2000,
+                              "dev.incr":0,
+                              "dev.plot.title":"F",
+                              "df2csv":"net_cropland_change_sedrunoff"             
+  
+                        },
+                         "p7": {
+                              "dataset":"exp_diff_tprunoff_fips_summary",
+                              "lookup":"tprunoff",
+                              "bin_breaks":[-1e300, -1e3, -500, -100, -50, 0, 50, 100, 500, 1e3, 1e300],
+                              "sat":2000,                                                         
+                              "plot.title":"",
+                              "plot.subtitle":"G",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":0,
+                              "dev.incr":1000,
+                              "dev.plot.title":"G",
+                              "df2csv":"cropland_expansion_tprunoff"             
+  
+                        },
+                        "p8": {
+                              "dataset":"abd_diff_tprunoff_fips_summary",
+                              "lookup":"tprunoff",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -500, -100, 0, 100, 500, 1e3, 1e4, 1e300],
+                              "sat":2000,                                                          
+                              "plot.title":"",
+                              "plot.subtitle":"H",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":1000,
+                              "dev.plot.title":"H",
+                              "df2csv":"cropland_abandonment_tprunoff"             
+  
+                        },
+                        "p9": {
+                              "dataset":"net_diff_tprunoff_fips_summary",
+                              "lookup":"tprunoff",
+                              "bin_breaks":[-1e300, -500, -100, -50, -25, 0, 25, 50, 100, 500, 1e300],
+                              "sat":2000,                                                         
+                              "plot.title":"",
+                              "plot.subtitle":"I",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":1000,
+                              "dev.plot.title":"I",
+                              "df2csv":"net_cropland_change_tprunoff"             
+  
+                        }
+
+                  }                       
+            }
+      },
+      "intensification": {
+            "fig1": {
+                  "core": {
+                        "parent":"intensification",
+                        "schema":"intensification_4_16_2020_abs",
+
+                        "palette_low":"BuPu",
+                        "palette_high":"YlGn",
+
+                        "output_dir":"intensification",
+                        "output_file":"fig1",
+                        "legend.position.y":-0.12,
+
+                        "plot.title.vjust":1,
+                        "plot.title.hjust":0.50,
+                        "plot.subtitle.vjust":1,
+                        "plot.subtitle.hjust":0.00,
+
+                        "draw_plot":{"x":-0.200,"y":-0.20,"w":1.4,"h":0.70},
+
+                        "legend.title.position.x":0,
+                        "legend.title.position.y":3,
+                        "legend.title.just":"left",
+                        "legend.title.rot":0,
+                        "legend.title.fontsize":40,
+
+                        "legend.labels.rot":315,
+                        "legend.labels.just":"left",
+                        "legend.labels.fontsize":35,
+                        "legend.labels.coef":0.98,
+
+                        "dev.cnt":9,
+                        "pnas_fig": "pnas_supp_fig_s3"
+                  },
+                  "panels": {
+
+                         "p1": {
+                              "dataset":"cc_napp_fips_summary",
+                              "lookup":"napp",
+                              "bin_breaks":[-1e300, -800, -400, -200, -100, 0, 100, 200, 400, 800, 1e300], 
+                              "sat":1500,                                                        
+
+                              "plot.title":"Corn-corn",
+                              "plot.subtitle":"A",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":1100,
+                              "dev.incr":100,
+                              "dev.plot.title":"A",
+                              "df2csv":"corn_corn_napp"
+                        },
+
+                        "p2": {
+                              "dataset":"co_napp_fips_summary",
+                              "lookup":"napp",
+                              "bin_breaks":[-1e300, -800, -400, -200, -100, 0, 100, 200, 400, 800, 1e300],
+                              "sat":1500, 
+
+                              "plot.title":"Corn-other",
+                              "plot.subtitle":"B",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":1100,
+                              "dev.incr":100,
+                              "dev.plot.title":"B",
+                              "df2csv":"corn_other_napp" 
+                        },
+
+                        "p3": {
+                              "dataset":"net_napp_fips_summary",
+                              "lookup":"napp",
+                              "bin_breaks":[-1e300, -800, -400, -200, -100, 0, 100, 200, 400, 800, 1e300],
+                              "sat":1500, 
+
+                              "plot.title":"All changes",
+                              "plot.subtitle":"C",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":1100,
+                              "dev.incr":100,
+                              "dev.plot.title":"C",
+                              "df2csv":"all_changes_napp"      
+                        },
+
+
+                        "p4": {
+                              "dataset":"cc_n2o_fips_summary",
+                              "lookup":"n2o",
+                              "bin_breaks":[-1e300, -5000, -1000, -500, -100, 0, 100, 500, 1000, 5000, 1e300], 
+                              "sat":10000,  
+
+                              "plot.title":"",
+                              "plot.subtitle":"D",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":9000,
+                              "dev.incr":1000,
+                              "dev.plot.title":"D",
+                              "df2csv":"corn_corn_n2o"           
+  
+                        },
+                        "p5": {
+                              "dataset":"co_n2o_fips_summary",
+                              "lookup":"n2o",
+                              "bin_breaks":[-1e300, -5000, -1000, -500, -100, 0, 100, 500, 1000, 5000, 1e300],
+                              "sat":10000,
+
+                              "plot.title":"",
+                              "plot.subtitle":"E",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":9000,
+                              "dev.incr":1000,
+                              "dev.plot.title":"E",
+                              "df2csv":"corn_other_n2o"          
+  
+                        },
+                        "p6": {
+                              "dataset":"net_n2o_fips_summary",
+                              "lookup":"n2o",
+                              "bin_breaks":[-1e300, -5000, -1000, -500, -100, 0, 100, 500, 1000, 5000, 1e300],                                                        
+                              "sat":10000,
+
+                              "plot.title":"",
+                              "plot.subtitle":"F",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":9000,
+                              "dev.incr":1000,
+                              "dev.plot.title":"F",
+                              "df2csv":"all_changes_n2o"            
+  
+                        },
+                         "p7": {
+                              "dataset":"cc_nleach_fips_summary",
+                              "lookup":"nleach",
+                              "bin_breaks":[-1e300, -200, -100, -50, -25, 0, 25, 50, 100, 200, 1e300],                                                        
+                              "sat":500,
+
+                              "plot.title":"",
+                              "plot.subtitle":"G",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":450,
+                              "dev.incr":50,
+                              "dev.plot.title":"G",
+                              "df2csv":"corn_corn_nleach"               
+  
+                        },
+                        "p8": {
+                              "dataset":"co_nleach_fips_summary",
+                              "lookup":"nleach",
+                              "bin_breaks":[-1e300, -200, -100, -50, -25, 0, 25, 50, 100, 200, 1e300],                                                      
+                              "sat":500,
+
+                              "plot.title":"",
+                              "plot.subtitle":"H",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":450,
+                              "dev.incr":50,
+                              "dev.plot.title":"H",
+                              "df2csv":"corn_other_nleach"           
+  
+                        },
+                        "p9": {
+                              "dataset":"net_nleach_fips_summary",
+                              "lookup":"nleach",
+                              "bin_breaks":[-1e300, -200, -100, -50, -25, 0, 25, 50, 100, 200, 1e300],                                                      
+                              "sat":500,
+
+                              "plot.title":"",
+                              "plot.subtitle":"I",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":450,
+                              "dev.incr":50,
+                              "dev.plot.title":"I",
+                              "df2csv":"all_changes_nleach"          
+                        }
+
+                  }                       
+            },
+            "fig2": {
+                  "core": {
+                        "parent":"intensification",
+                        "schema":"intensification_4_16_2020_abs",
+
+                        "palette_low":"BuPu",
+                        "palette_high":"YlGn",
+
+                        "output_dir":"intensification",
+                        "output_file":"fig2",
+                        "legend.position.y":-0.12,
+
+                        "plot.title.vjust":1,
+                        "plot.title.hjust":0.50,
+                        "plot.subtitle.vjust":1,
+                        "plot.subtitle.hjust":0.00,
+
+
+                        "draw_plot":{"x":-0.200,"y":-0.20,"w":1.4,"h":0.70},
+
+                        "legend.title.position.x":0,
+                        "legend.title.position.y":3,
+                        "legend.title.just":"left",
+                        "legend.title.rot":0,
+                        "legend.title.fontsize":40,
+
+                        "legend.labels.rot":315,
+                        "legend.labels.just":"left",
+                        "legend.labels.fontsize":35,
+                        "legend.labels.coef":0.98,
+
+
+                        "dev.cnt":9,"pnas_fig": "pnas_supp_fig_s5"
+
+
+
+                  },
+                  "panels": {
+
+                         "p1": {
+                              "dataset":"cc_papp_fips_summary",
+                              "lookup":"papp",
+                              "bin_breaks":[-1e300, -80, -40, -20, -10, 0, 10, 20, 40, 80, 1e300],   
+                              "sat":200,                                                       
+
+                              "plot.title":" Corn-corn",
+                              "plot.subtitle":"A",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":0,
+                              "dev.incr":50,
+                              "dev.plot.title":"A",
+                              "df2csv":"corn_corn_papp"
+
+
+                        },
+
+                        "p2": {
+                              "dataset":"co_papp_fips_summary",
+                              "lookup":"papp",
+                              "bin_breaks":[-1e300, -80, -40, -20, -10, 0, 10, 20, 40, 80, 1e300],  
+                              "sat":200,  
+
+                              "plot.title":" Corn-other",
+                              "plot.subtitle":"B",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":50,
+                              "dev.plot.title":"B",
+                              "df2csv":"corn_other_papp"    
+                        },
+
+                        "p3": {
+                              "dataset":"net_papp_fips_summary",
+                              "lookup":"papp",
+                              "bin_breaks":[-1e300, -80, -40, -20, -10, 0, 10, 20, 40, 80, 1e300],  
+                              "sat1":200,  
+
+                              "plot.title":"All changes",
+                              "plot.subtitle":"C",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":50,
+                              "dev.plot.title":"C",
+                              "df2csv":"all_changes_papp"  
+                        },
+
+
+                        "p4": {
+                              "dataset":"cc_sedyield_fips_summary",
+                              "lookup":"sedyield",
+                              "bin_breaks":[-1e4, -1e3, -500, -100, -50, 0, 50, 100, 500, 1e3, 1e4],      
+                              "sat":2000,                                                         
+                              "plot.title":"",
+                              "plot.subtitle":"D",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":0,
+                              "dev.incr":500,
+                              "dev.plot.title":"D",
+                              "df2csv":"corn_corn_sedyield"         
+  
+                        },
+                        "p5": {
+                              "dataset":"co_sedyield_fips_summary",
+                              "lookup":"sedyield",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -500, -100, 0, 100, 500, 1e3, 1e4, 1e300],   
+                              "sat":2000,                                                       
+                              "plot.title":"",
+                              "plot.subtitle":"E",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":500,
+                              "dev.plot.title":"E",
+                              "df2csv":"corn_other_sedyield"            
+  
+                        },
+                        "p6": {
+                              "dataset":"net_sedyield_fips_summary",
+                              "lookup":"sedyield",
+                              "bin_breaks":[-1e300, -500, -100, -50, -25, 0, 25, 50, 100, 500, 1e300],  
+                              "sat":2000,                                                             
+                              "plot.title":"",
+                              "plot.subtitle":"F",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":250,
+                              "dev.plot.title":"F",
+                              "df2csv":"all_changes_sedyield"         
+  
+                        },
+                         "p7": {
+                              "dataset":"cc_pyield_fips_summary",
+                              "lookup":"pyield",
+                              "bin_breaks":[-1e300, -1e3, -500, -100, -50, 0, 50, 100, 500, 1e3, 1e300],   
+                              "sat":2000,                                                          
+                              "plot.title":"",
+                              "plot.subtitle":"G",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":0,
+                              "dev.incr":500,
+                              "dev.plot.title":"G",
+                              "df2csv":"corn_corn_pyield"            
+  
+                        },
+                        "p8": {
+                              "dataset":"co_pyield_fips_summary",
+                              "lookup":"pyield",
+                              "bin_breaks":[-1e300, -1e4, -1e3, -500, -100, 0, 100, 500, 1e3, 1e4, 1e300],  
+                              "sat":2000,                                                             
+                             "plot.title":"",
+                              "plot.subtitle":"H",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":500,
+                              "dev.plot.title":"H",
+                              "df2csv":"corn_other_pyield" 
+  
+                        },
+                        "p9": {
+                              "dataset":"net_pyield_fips_summary",
+                              "lookup":"pyield",
+                              "bin_breaks":[-1e300, -500, -100, -50, -25, 0, 25, 50, 100, 500, 1e300], 
+                              "sat":2000,                                                             
+                              "plot.title":"",
+                              "plot.subtitle":"I",
+
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.7,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":0,
+                              "dev.incr":250,
+                              "dev.plot.title":"I",
+                              "df2csv":"all_changes_pyield"  
+  
+                        }
+
+                  }                        
+            },
+            "fig3": {
+                  "core": {
+                        "parent":"intensification",
+
+                        "palette_low":"BuPu",
+                        "palette_high":"YlGn",
+
+                        "output_dir":"intensification",
+                        "output_file":"fig3",
+                        "legend.position.y":-0.12,
+
+                        "plot.title.vjust":1,
+                        "plot.title.hjust":0.50,
+                        "plot.subtitle.vjust":1,
+                        "plot.subtitle.hjust":0.00,
+
+                        "draw_plot":{"x":-0.200,"y":-0.20,"w":1.4,"h":0.70},
+
+                        "legend.title.position.x":0,
+                        "legend.title.position.y":3,
+                        "legend.title.just":"left",
+                        "legend.title.rot":0,
+                        "legend.title.fontsize":40,
+
+                        "legend.labels.rot":315,
+                        "legend.labels.just":"left",
+                        "legend.labels.fontsize":35,
+                        "legend.labels.coef":0.98,
+
+                        "dev.cnt":6,
+                        "pnas_fig": "pnas_supp_fig_s1"
+                  },
+                  "panels": {
+
+                         "p1": {
+                              "schema":"intensification_4_16_2020_abs",
+                              "dataset":"cc_acres_fips_summary",
+                              "lookup":"area_ha",
+                              "bin_breaks":[-1e300, -10000, -1000, -100, -50, 0, 50, 100, 1000, 10000, 1e300], 
+                              "sat":10000,                                                         
+
+                              "plot.title":"Continuous corn",
+                              "plot.subtitle":"A",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":4000,
+                              "dev.incr":1000,
+                              "dev.plot.title":"A",
+                              "df2csv":"continuous_corn_area_ha"        
+
+
+                        },
+
+                        "p2": {
+                              "schema":"intensification_4_16_2020_abs",
+                              "dataset":"co_acres_fips_summary",
+                              "lookup":"area_ha",
+                              "bin_breaks":[-1e300, -10000, -1000, -100, -50, 0, 50, 100, 1000, 10000, 1e300],  
+                              "sat":10000, 
+
+                              "plot.title":"Rotational corn",
+                              "plot.subtitle":"B",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":4000,
+                              "dev.incr":1000,
+                              "dev.plot.title":"B",
+                              "df2csv":"rotational_corn_area_ha"       
+                        },
+
+                        "p3": {
+                              "schema":"intensification_4_16_2020_abs",
+                              "dataset":"corntot_acres_fips_summary",
+                              "lookup":"area_ha",
+                              "bin_breaks":[-1e300, -10000, -1000, -100, -50, 0, 50, 100, 1000, 10000, 1e300],
+                              "sat":10000,    
+
+                              "plot.title":"Total corn",
+                              "plot.subtitle":"C",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":2000,
+                              "dev.incr":1000,
+                              "dev.plot.title":"C",
+                              "df2csv":"total_corn_area_ha"    
+                        },
+
+
+                         "p4": {
+                              "schema":"intensification_4_16_2020_rel",
+                              "dataset":"cc_acres_fips_summary",
+                              "lookup":"area_perc",
+                              "bin_breaks":[-1e300, -0.20, -0.15, -0.10, -0.05, 0, 0.05, 0.10, 0.15, 0.20, 1e300],
+                              "sat":100,                                                         
+
+                              "plot.title":"",
+                              "plot.subtitle":"D",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "legend.justification":[0.5,0.5],
+                              "align_legend.hjust":0.565,
+
+                              "dev.krnl":10,
+                              "dev.incr":10,
+                              "dev.plot.title":"D",
+                              "df2csv":"continuous_corn_area_perc"
+                        },
+
+                        "p5": {
+                              "schema":"intensification_4_16_2020_rel",
+                              "dataset":"co_acres_fips_summary",
+                              "lookup":"area_perc",
+                              "bin_breaks":[-1e300, -0.20, -0.15, -0.10, -0.05, 0, 0.05, 0.10, 0.15, 0.20, 1e300],
+                              "sat":100,   
+
+                              "plot.title":"",
+                              "plot.subtitle":"E",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":10,
+                              "dev.incr":10,
+                              "dev.plot.title":"E",
+                              "df2csv":"rotational_corn_area_perc"     
+                        },
+
+                        "p6": {
+                              "schema":"intensification_4_16_2020_rel",
+                              "dataset":"corntot_acres_fips_summary",
+                              "lookup":"area_perc",
+                              "bin_breaks":[-1e300, -0.20, -0.15, -0.10, -0.05, 0, 0.05, 0.10, 0.15, 0.20, 1e300],
+                              "sat":100,   
+
+                              "plot.title":"",
+                              "plot.subtitle":"F",
+                              "plot.margin":{"t":0.25, "r":0.235, "b":0.25, "l":0.235},
+                              "inversion_coeff":"1",
+  
+                              "legend.labels.position.x":0,
+                              "legend.labels.position.x.coef":0.10, 
+                              "legend.labels.position.y":-0.5,
+                              "legend.labels.position.y.coef":0.001,
+
+                              "dev.krnl":10,
+                              "dev.incr":10,
+                              "dev.plot.title":"F",
+                              "df2csv":"total_corn_area_perc"    
+                        }
+
+                  }                       
+            }
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
